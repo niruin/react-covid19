@@ -1,0 +1,119 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.dropdown {
+  position: relative;
+  height: 36px;
+  width: 100%;
+  user-select: none;
+  max-width: 300px;
+  background-color: var(--background-secondary);
+
+  &__list-wrapper {
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--main-border-color);
+    border-radius: 0 0 4px 4px;
+    border-top-color: transparent;
+    z-index: 2;
+    box-sizing: border-box;
+    box-shadow: var(--main-background-color) 0 2px 2px 1px;
+  }
+
+  &__input {
+    border: 1px solid var(--main-border-color);
+    border-radius: 4px;
+    outline-style: none;
+    margin: 16px;
+    background-color: var(--main-background-color);
+    color: var(--main-color);
+    font-size: 1rem;
+    line-height: 2rem;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+
+  &__btn {
+    position: absolute;
+    border-radius: 4px;
+    z-index: 1;
+
+    &--dark {
+      background-color: transparent;
+
+      &:hover:not(:disabled) {
+        cursor: pointer;
+      }
+    }
+
+    &--expand {
+      border-radius: 4px 4px 0 0;
+      border-bottom-color: transparent;
+      box-shadow: var(--main-background-color) 0 2px 2px 1px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn-icon {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.125rem;
+    vertical-align: top;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn-text {
+    margin: 0 0.25rem;
+    vertical-align: middle;
+
+    @media only screen and (max-width: 768px) {
+      margin: 0 0.125rem;
+    }
+  }
+
+  &__icon {
+    padding: 0.313rem 0.25rem;
+    border: 1px solid $Blue;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  &__list-item {
+    color: var(--main-color);
+    padding: 1rem;
+
+    &:hover {
+      @include hover-background;
+    }
+  }
+
+  &--opened {
+    .dropdown__icon {
+      transform: rotate(180deg);
+      border: 1px solid $Blue;
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+    }
+  }
+}

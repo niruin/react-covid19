@@ -1,0 +1,83 @@
+@import 'common/styles/colors';
+@import 'common/styles/vars';
+@import 'common/styles/mixins';
+
+.search-panel {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  &__item {
+    max-height: 70px;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
+
+    &_btn {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $Black;
+      cursor: pointer;
+
+      svg {
+        fill: $Gray10;
+      }
+    }
+
+    &_btn-link {
+      margin: 0 1rem;
+    }
+
+    &_btn-control {
+      cursor: pointer;
+      padding: 2px 4px;
+      border: 1px solid;
+      border-radius: 3px;
+      border-color: transparent;
+
+      &:hover {
+        border-color: $Gray80;
+        transition: all 0.2s;
+      }
+    }
+
+    &_wrapper {
+      flex: 1;
+    }
+
+    &_input {
+      display: flex;
+      width: 100%;
+      padding: 0 20px;
+      border: 0;
+      outline: none;
+      font-size: 1rem;
+      height: 69px;
+      line-height: normal;
+      box-sizing: border-box;
+      margin-top: 2px;
+      background: transparent;
+
+      &--dark {
+        caret-color: $Gray10;
+        color: $Gray80;
+      }
+    }
+
+    &_filter-text {
+      margin-right: 20px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &__backdrop {
+    top: 72px;
+  }
+}

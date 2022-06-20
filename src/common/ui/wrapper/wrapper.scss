@@ -1,0 +1,22 @@
+.wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--justifyContent-left {
+    justify-content: flex-start;
+  }
+
+  &--justifyContent-space-between {
+    justify-content: space-between;
+  }
+
+  &--justifyContent-flex-end {
+    justify-content: flex-end;
+  }
+
+  &--justifyContent-flex-start {
+    justify-content: flex-start;
+  }
+}

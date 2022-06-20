@@ -1,0 +1,16 @@
+.buttons-group {
+  display: flex;
+  justify-content: center;
+
+  &__flex-end {
+    justify-content: flex-end;
+  }
+
+  & .btn:not(:last-child) {
+    margin-right: 0.875rem;
+  }
+
+  & .dropdown__btn:not(:last-child) {
+    margin-right: 0;
+  }
+}

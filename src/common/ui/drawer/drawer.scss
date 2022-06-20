@@ -1,0 +1,44 @@
+@import 'common/styles/colors.scss';
+
+.drawer {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 20rem;
+  //box-shadow: 0 9px 46px 5px $Black80;
+  box-shadow: 0 0 16px var(--main-background-color);
+  animation: slide 200ms linear;
+
+  @keyframes slide {
+    from {
+      margin-left: -320px;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+
+  &--disappear {
+    margin-left: -320px;
+    transition: all 0.2s linear;
+  }
+
+  &__big {
+    animation: big-slide 0.3s linear;
+
+    @keyframes big-slide {
+      from {
+        margin-left: 100vw;
+      }
+      to {
+        margin-left: 0;
+      }
+    }
+
+    &--disappear {
+      margin-left: 100vw;
+      transition: all 0.3s linear;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import 'common/styles/colors';
+@import 'common/styles/mixins';
+
+.summary-to-country {
+  padding-top: 10px;
+  width: 100%;
+
+  &__container {
+    margin: auto;
+    width: 100%;
+  }
+
+  &__btn {
+    cursor: pointer;
+    margin: 6px;
+
+    &--dark {
+      fill: $Gray10;
+    }
+  }
+}

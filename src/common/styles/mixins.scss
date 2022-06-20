@@ -1,0 +1,13 @@
+@import 'common/styles/colors';
+
+@mixin inner {
+  max-width: 100%;
+}
+
+@mixin hover-background {
+  &:hover {
+    background-color: rgba($Gray40, 0.12);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}

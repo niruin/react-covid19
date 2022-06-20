@@ -1,0 +1,70 @@
+{
+  "name": "covid-19-info",
+  "version": "0.9.1",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint --ext .ts,.tsx src --fix",
+    "test": "react-scripts test",
+    "pretty": "prettier --write src/**/*.{ts,tsx,scss}",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "dayjs": "^1.10.7",
+    "express": "^4.17.2",
+    "i18next": "^21.5.3",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.14.3",
+    "react-router-dom": "^5.3.0",
+    "recharts": "^2.1.8"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/node": "16.11.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.6.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

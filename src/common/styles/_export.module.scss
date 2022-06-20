@@ -1,0 +1,21 @@
+@import 'common/styles/colors';
+
+/* only for JS files */
+
+:export {
+  amber: $Amber;
+  aqua: $Aqua;
+  orange: $Orange;
+  white: $White;
+  black: $Black;
+  gray10: $Gray10;
+  gray20: $Gray20;
+  gray30: $Gray30;
+  gray60: $Gray60;
+  gray80: $Gray80;
+  black40: $Black40;
+  black60: $Black60;
+  black80: $Black80;
+  black120: $Black120;
+  blue: $Blue;
+}

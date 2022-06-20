@@ -1,0 +1,66 @@
+@import 'common/styles/colors';
+@import 'common/styles/mixins';
+
+.statistics-country {
+  &__container {
+    margin: 50px auto auto;
+    width: 100%;
+    max-width: 690px;
+  }
+
+  &__label {
+    color: var(--main-color);
+    font-size: 14px;
+  }
+  &__label-mini {
+    font-size: 13px;
+    color: #70757a;
+  }
+
+  &__mark {
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: bold;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+
+    &-inner {
+      width: 100%;
+
+      &:first-child {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-right: 1px solid var(--main-border-color);
+      }
+
+      &-row {
+        display: flex;
+        justify-content: space-between;
+
+        &:first-child {
+          border-bottom: 1px solid var(--main-border-color);
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+        }
+      }
+
+      &-cell {
+        width: 100%;
+        padding: 0 10px;
+        min-height: 65px;
+
+        &:first-child {
+          border-right: 1px solid var(--main-border-color);
+        }
+      }
+    }
+  }
+}

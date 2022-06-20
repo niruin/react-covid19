@@ -1,0 +1,36 @@
+@import '../../styles/colors';
+
+$LightThemeTextUnderline: rgba(32, 33, 33, 0.3);
+$DarkThemeTextUnderline: rgba(173, 173, 173, 0.3);
+
+.underlink {
+  position: relative;
+  color: $Black;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, black 45%, $LightThemeTextUnderline 55%);
+    background-size: 220% 100%;
+    background-position: 100% 50%;
+    transition: 0.3s ease-out;
+  }
+
+  &--dark {
+    color: $Gray80;
+
+    &:before {
+      background-image: linear-gradient(to right, $Gray80 45%, $DarkThemeTextUnderline 55%);
+    }
+  }
+
+  &:hover:before {
+    background-position: 0 50%;
+  }
+}

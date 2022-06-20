@@ -1,0 +1,19 @@
+@import 'common/styles/colors';
+@import 'common/styles/mixins';
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+  &__container {
+    padding: 34px 40px 40px;
+    max-width: 900px;
+    background-color: var(--main-background-color);
+  }
+
+  &__title {
+    margin-top: 40px;
+    text-transform: uppercase;
+  }
+}

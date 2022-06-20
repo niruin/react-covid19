@@ -1,0 +1,106 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.table {
+  width: 100%;
+  border-radius: 0.25rem;
+  border-collapse: collapse;
+  background-color: var(--main-background-color);
+  color: var(--main-color);
+
+  &--fixed {
+    table-layout: fixed;
+  }
+
+  &__caption {
+    padding: 1rem;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--main-color);
+    border: 1px solid var(--main-border-color);
+    border-bottom: none;
+    background-color: var(--background-secondary);
+    text-align: left;
+  }
+
+  &__head {
+    border-bottom: 1px solid var(--main-border-color);
+    background-color: var(--background-secondary);
+
+    &-cell {
+      padding: 1rem 1rem;
+      font-weight: bold;
+      font-size: 0.938rem;
+      line-height: 1.5rem;
+
+      &:hover {
+        text-shadow: 0 0 1px var(--main-color);
+      }
+
+      &--orderable:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body & {
+    &__row {
+      &:hover {
+        @include hover-background;
+      }
+    }
+  }
+
+  &__row {
+    border-top: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--main-border-color);
+
+    &--clickable {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__cell {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+.settings-icon {
+  width: 1.125rem;
+  min-width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+}
+
+.copy-icon {
+  margin-top: 2px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+
+  &--dir-up {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+
+  &--dir-down {
+    opacity: 1;
+  }
+}

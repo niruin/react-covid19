@@ -1,0 +1,101 @@
+@import 'common/styles/colors';
+@import 'common/styles/mixins';
+
+.over-box {
+  position: absolute;
+  color: var(--main-color);
+  min-height: 300px;
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
+  background-color: var(--main-background-color);
+  left: 0;
+  right: 0;
+  top: 70px;
+  z-index: 2;
+  padding: 4px 2px 4px;
+  border-top: 1px solid var(--main-border-color);
+  border-bottom: 1px solid var(--main-border-color);
+  box-shadow: 0 8px 16px -8px var(--background-secondary);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 4px;
+  }
+
+  &__btn-control {
+    cursor: pointer;
+    padding: 2px 4px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &:hover {
+      border-color: $Gray80;
+      transition: all 0.2s;
+    }
+  }
+
+  &__btn-group {
+    margin: 10px 0 8px;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  & > svg {
+    fill: red;
+  }
+  &__item {
+    width: 200px;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 2px;
+    position: relative;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @include hover-background;
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 1.125rem;
+          width: 20px;
+          height: 20px;
+          -webkit-mask: url(../../../assets/svg/ic_plus.svg);
+          mask: url(../../../assets/svg/ic_plus.svg);
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: var(--main-color);
+        }
+      }
+    }
+
+    &--selected {
+      background-color: rgba($Aqua, 0.3);
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0.875rem;
+            width: 26px;
+            height: 26px;
+            -webkit-mask: url(../../../assets/svg/ic_close.svg);
+            mask: url(../../../assets/svg/ic_close.svg);
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: $Red;
+          }
+        }
+      }
+    }
+  }
+}

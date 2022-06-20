@@ -1,0 +1,62 @@
+{
+  "lang": "English",
+  "common": {
+    "summary": "Summary",
+    "menu": {
+      "menu": "Menu",
+      "back": "Back",
+      "home": "Summary",
+      "summary_to_country": "Summary to country",
+      "about": "Covid-19",
+      "close": "Close",
+      "activate_black_option": "Activate black option",
+      "activate_white_option": "Activate white option",
+      "selected": "Selected",
+      "show_all": "Show all",
+      "reset": "Reset",
+      "non_selected_countries": "Non-selected countries"
+    },
+    "show_filters": "Show filters",
+    "search_by_region_or_country": "Search by region or country",
+    "data_sheet": {
+      "table": {
+        "header": "Situation by Region, Country",
+        "countries": "Countries",
+        "new_confirmed": "Confirmed per day",
+        "new_deaths": "Deaths per day",
+        "new_recovered": "New recovered",
+        "total_confirmed": "Total confirmed",
+        "total_deaths": "Total deaths",
+        "total_recovered": "Total recovered"
+      }
+    },
+    "chart": {
+      "avg7": "Average for 7 days",
+      "options": {
+        "all_time": "All time",
+        "2week": "2 week",
+        "30days": "30 days",
+        "3months": "3 months",
+        "6months": "6 months",
+        "confirmed": "Confirmed",
+        "deaths": "Deaths"
+      },
+      "new_cases": "New cases",
+      "cases": "Cases",
+      "deaths": "Deaths",
+      "population": "Population",
+      "updated": "Last updated",
+      "1_month": "1 month"
+    },
+    "about": {
+      "title": "Covid-19",
+      "paragraph": {
+        "text1": "Coronavirus infection (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.",
+        "text2": "Most people with COVID-19 have mild or moderate symptoms and recover without specific treatment. However, some people have a severe disease and require medical attention.",
+        "text3": "How the disease spreads",
+        "text4": "The virus can be transmitted through droplets of saliva from the mouth or discharge from the nose of an infected person while coughing, sneezing, talking, singing, or breathing. The particle size of the liquid can vary from large respiratory droplets to smaller aerosol particles.",
+        "text5": "The virus can be contracted by airborne droplets from being close to a person with COVID-19, or by transferring the virus by hand from an infected surface to the mucous membranes of the eyes, nose, or mouth. The virus spreads more easily in closed and crowded spaces."
+      }
+    }
+  }
+}

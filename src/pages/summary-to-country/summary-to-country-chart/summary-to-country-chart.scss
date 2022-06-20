@@ -1,0 +1,43 @@
+@import 'common/styles/colors';
+@import 'common/styles/mixins';
+
+.summary-to-country-chart {
+  &__container {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &__dropdown-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 9px;
+    margin-left: 58px;
+    margin-right: 49px;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      margin-right: 9px;
+    }
+
+    > div {
+      margin-top: 8px;
+    }
+
+    > div:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__chart {
+    margin: auto;
+    max-width: 800px;
+    color: var(--main-color);
+  }
+
+  &__tooltip {
+    background-color: var(--main-background-color);
+    fill: $Aqua;
+    color: #733636;
+  }
+}
