@@ -13,10 +13,10 @@ import {Options} from 'common/types';
 import colors from 'common/styles/_export.module.scss';
 import {useChartDataService} from 'services/chart-data/use-chart-data-service';
 import {useCountriesService} from 'services/countries/use-countries-service';
+import {useStaticsCountry} from 'services/statistics-country';
 
 import {TWO_WEEK, MONTH, TREE_MONTH, HALF_YEAR, ALL_TIME} from './consts';
 import './summary-to-country-chart.scss';
-import {useStaticsCountry} from '../../../services/statistics-country';
 
 function collectionOptions(list: GetCountriesResponse, filter: string): Options {
   const regex = new RegExp(`^${filter.toLowerCase()}`);
@@ -68,10 +68,9 @@ export function SummaryToCountryChart() {
     {label: t('chart.options.6months'), value: HALF_YEAR, labelShort: '6M'},
   ];
 
-  function getDataLabelDropdown() {
+  function getDateLabelDropdown() {
     const option = timePeriodOptions.find((item) => item.value === periodValueDropdown);
-
-    return option?.label;
+    return window.innerWidth > 768 ? option?.label : option?.labelShort;
   }
 
   useEffect(() => {
@@ -101,11 +100,13 @@ export function SummaryToCountryChart() {
     setTypeDataValueDropdown(value || 'ConfirmedPerDay');
   };
 
+  const labelCountry = window.innerWidth >= 768 ? data?.Country : data?.CountryCode;
+
   return (
     <div className={bt('container')}>
       <Wrapper className={bt('dropdown-group')}>
         <Dropdown
-          label={data?.Country || 'not selected'}
+          label={labelCountry || 'not selected'}
           options={collectionOptions(countries, inputValueDropdown)}
           onOptionClick={handleChangeCountry}
           value={inputValueDropdown}
@@ -115,7 +116,7 @@ export function SummaryToCountryChart() {
           loadingOptions={loading}
         />
         <Dropdown
-          label={getDataLabelDropdown()}
+          label={getDateLabelDropdown()}
           options={timePeriodOptions}
           onOptionClick={handleTogglePeriod}
           theme={theme}

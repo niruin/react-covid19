@@ -32,9 +32,9 @@ export const StatisticsCountry = () => {
       ) : (
         <div className={bt('summary')}>
           <div className={bt('summary-inner')}>
-            <div>{stat?.continent}</div>
-            <div>{stat?.country}</div>
-            <div>
+            <div className={bt('label-head')}>{stat?.continent}</div>
+            <div className={bt('label-head')}>{stat?.country}</div>
+            <div className={bt('label-head')}>
               {t('chart.population')}: {formatNumber(stat?.population)}
             </div>
             <div className={bt('label-mini')}>

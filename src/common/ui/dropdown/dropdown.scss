@@ -24,6 +24,10 @@
     z-index: 2;
     box-sizing: border-box;
     box-shadow: var(--main-background-color) 0 2px 2px 1px;
+
+    @media only screen and (max-width: 768px) {
+      min-width: max-content;
+    }
   }
 
   &__input {
@@ -102,6 +106,7 @@
   &__list-item {
     color: var(--main-color);
     padding: 1rem;
+    max-width: 200px;
 
     &:hover {
       @include hover-background;

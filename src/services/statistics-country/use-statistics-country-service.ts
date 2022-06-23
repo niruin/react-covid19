@@ -50,6 +50,8 @@ export const useStatisticsCountryService = (): StatisticsCountryServices => {
   const [error, setError] = useState<boolean>(false);
 
   const getStat = async (country: string) => {
+    if (country === 'united-states') country = 'usa';
+
     setLoading(true);
     try {
       const data = await http.get<{country: string}, ResponseStatisticsCountry>('statistics', {
